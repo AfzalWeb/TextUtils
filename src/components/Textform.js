@@ -54,7 +54,7 @@ const Onchanged=(event)=>{
   
   <div className="container my-3" style={{color : props.mode==='dark'?'white':'black'}}>
     <h1>Your Text summary</h1>
-    <p>{text.split(' ').length} Words and {text.length} Characters</p>
+    <p>{text.split(' ').filter((elem)=>{return elem.length!==0}).length} Words and {text.length} Characters</p>
     <p>{0.008*text.split(' ').length}Minutes read</p>
     <h2>Text Preview</h2>
     <p>{text}</p>
